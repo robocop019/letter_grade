@@ -41,22 +41,19 @@ def calculate_letter_grade(*grades)
     total_grade += grade
   end
   avg = total_grade / length
-  
+
   if avg > 89
-    return 'A'
+    if avg > 97 then return 'A+' elsif avg < 93 then return 'A-' else return 'A' end
   elsif avg > 79
-      return 'B'
+    if avg > 87 then return 'B+' elsif avg < 83 then return 'B-' else return 'B' end
   elsif avg > 69
-    return 'C'
+    if avg > 77 then return 'C+' elsif avg < 73 then return 'C-' else return 'C' end
   elsif avg > 59
-    return 'D'
+    if avg > 67 then return 'D+' elsif avg < 63 then return 'D-' else return 'D' end
   else  
     return 'F :('
   end
 end
-
-# Commit 5 - Refactor Solution
-
 
 
 # Commit 4 - Write Runner Code / Tests
