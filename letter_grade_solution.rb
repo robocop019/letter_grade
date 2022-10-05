@@ -51,17 +51,17 @@ students.each do |student|
   avg = total_grades / grades
   letter_grade = ''
 
-   if avg > 89
-      if avg > 97 then letter_grade = 'A+' elsif avg < 93 then letter_grade = 'A-' else letter_grade = 'A' end
-    elsif avg > 79
-      if avg > 87 then letter_grade = 'B+' elsif avg < 83 then letter_grade = 'B-' else letter_grade = 'B' end
-    elsif avg > 69
-      if avg > 77 then letter_grade = 'C+' elsif avg < 73 then letter_grade = 'C-' else letter_grade = 'C' end
-    elsif avg > 59
-      if avg > 67 then letter_grade = 'D+' elsif avg < 63 then letter_grade = 'D-' else letter_grade = 'D' end
-    else  
-      letter_grade = 'F :('
-    end
+  if avg > 89
+    if avg > 97 then letter_grade = 'A+' elsif avg < 93 then letter_grade = 'A-' else letter_grade = 'A' end
+  elsif avg > 79
+    if avg > 87 then letter_grade = 'B+' elsif avg < 83 then letter_grade = 'B-' else letter_grade = 'B' end
+  elsif avg > 69
+    if avg > 77 then letter_grade = 'C+' elsif avg < 73 then letter_grade = 'C-' else letter_grade = 'C' end
+  elsif avg > 59
+    if avg > 67 then letter_grade = 'D+' elsif avg < 63 then letter_grade = 'D-' else letter_grade = 'D' end
+  else  
+    letter_grade = 'F :('
+  end
   
   puts "#{name} got an avgerage of #{avg} and recieved a #{letter_grade}"
 end
