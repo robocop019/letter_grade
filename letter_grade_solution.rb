@@ -34,8 +34,25 @@
 
 # Commit 3 - Initial Solution
 
-def calculate_letter_grade()
-  # write code here  
+def calculate_letter_grade(*grades)
+  length = grades.length
+  total_grade = 0
+  grades.each do |grade|
+    total_grade += grade
+  end
+  avg = total_grade / length
+  
+  if avg > 89
+    return 'A'
+  elsif avg > 79
+      return 'B'
+  elsif avg > 69
+    return 'C'
+  elsif avg > 59
+    return 'D'
+  else  
+    return 'F :('
+  end
 end
 
 # Commit 5 - Refactor Solution
@@ -43,6 +60,13 @@ end
 
 
 # Commit 4 - Write Runner Code / Tests
+
+p calculate_letter_grade(65, 70, 75)
+p calculate_letter_grade(95, 98, 76, 94)
+p calculate_letter_grade(100)
+p calculate_letter_grade(85, 80, 90, 89, 87, 86, 82)
+p calculate_letter_grade(45, 75, 67, 85, 90)
+p calculate_letter_grade(45, 60, 67, 25, 0)
 
 
 
